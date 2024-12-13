@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<style>
+.data{
+    width: 100%;
+    border-radius: 3px;
+    height: 92vh;
+    overflow-y: auto;
+}
+#searchbar{
+    width: 100%;
+    background-color: #eee;
+    border-radius: 3px;
+    margin: 0px 15px;
+}
+input{
+    border: none;
+    outline: none;
+    background: none;
+}
+.top{
+    height: 60px;
+    border-radius: 3px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+.top h2{
+    text-align: center;
+}
+.header{
+    height: 200px;
+    border-radius: 3px;
+    background-color: #001b64;
+    margin: 3px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header p{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+#root{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+.box{
+    margin: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #333;
+    padding: 15px;
+}
+.bottom{
+    margin-top: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 500px;
+}
+p{
+    font-size: 100%;
+    color: rgb(0, 17, 95);
+}
+img{
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+</style>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background:linear-gradient(#04F8B9, #7CF279);">
+        <div class="container-fluid">
+            <img src="Logo-removebg-preview.png" alt="Lodge of Light No.413" style="width: 80px; height: 60px;">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active"  style="color: white; font-weight: 500; padding-left: 40px;" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white; font-weight: 500; padding-left: 40px;">
+                 About
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="about.html">Action</a></li>
+                  <li><a class="dropdown-item" href="about2.html">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="about3.html">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white; font-weight: 500; padding-left: 40px;">
+                    Freemasonry
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="freemosory.html">About Freemasonry</a></li>
+                  <li><a class="dropdown-item" href="freemosory2.html">Magazine</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="activity.html" style="color: white; font-weight: 500; padding-left: 40px;">Activities</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="shop.html" style="color: white; font-weight: 500; padding-left: 40px;">Shop</a>
+              </li>
+            </ul>
+            <div class="searchbar" style="margin: 5px 10px; width: 200px; height: max-content; text-align: end;">
+                <input type="text" style="height: 40px;" placeholder=" Enter Search" id="searchbar" name="searchbar">
+                <!-- <button class="btn btn-outline-light"><i class="fa-solid fa-magnifying-glass"></i> Search</button> -->
+            </div>
+          </div>
+        </div>
+      </nav>
+   <br><br><br><br>
+    <div class="container">
+        <div class="data">
+            <div class="top">
+                <h2>Activities and Events of the Lodge</h2>
+            </div><br>
+            <!-- <div class="header">
+                <p>Passport in Abord</p>
+            </div> -->
+           
+            <div class="body">
+                <div id="root">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+    const product = [
+        {
+            id: 1,
+            city: 'EMBRACING TRADITION: RAISING OF BRO.AARON',
+            time: 'In a poignant ceremony hosted at Freemason s Hall, Brother Aaron of Lodge of Light ascended to the esteemed rank',
+            avilable: "src = '1.jpg'"
+        },
+        {
+            id: 2,
+            city: 'INSTALLATION OF BRO.SHISHIR M.S.',
+            time: 'On the 14th of April, Brother Padmanabhan Rajagopalan and Brother Shreyas Mohan were passed',
+            avilable:  "src = '1.jpg'"
+        },
+        {
+            id: 3,
+            city: 'UNIVERSAL BROTHERHOOD DAY CELEBRATION: PANEL DISCUSSION HIGHLIGHTS UNITY IN DIVERSITY',
+            time: 'In a celebration of Universal Brotherhood Day, Assistant Regional Grand Masters (ARGMs) from Bangalore',
+            avilable:  "src = '1.jpg'"
+        },
+        {
+            id: 4,
+            city: 'WALKATHON FOR UNIVERSAL BROTHERHOOD DAY',
+            time: 'In a heartwarming celebration of Universal Brotherhood Day, Assistant Regional Grand Masters (ARGMs)',
+            avilable:  "src = '1.jpg'"
+        },
+        {
+            id: 5,
+            city: 'CELEBRATION OF MILESTONE BIRTHDAYS OF WRBO',
+            time: 'Following the ceremony, the brethren proceeded to WBro.',
+            avilable:  "src = '1.jpg'"
+        },
+        {
+            id: 6,
+            city: 'RAISING OF BRO.PADMANABHAN',
+            time: 'On June 15th, Brother Padmanabhan Rajagopalan, affectionately known as Paddy, achieved the prestigious rank.',
+            avilable:  "src = '1.jpg'"
+        },
+        {
+            id: 7,
+            city: 'BEST LODGE CELEBRATION',
+            time: 'The brethren of Lodge of Light congregated with jubilance to commemorate their recent achievement of being honored as the best lodge in the Bangalore area. This momentous occasio',
+            avilable:  "src = '1.jpg'"
+        }
+    ]
+    const category = [...new Set(product.map((item)=>{return item}))]
+
+    document.getElementById('searchbar').addEventListener('keyup',(e)=>{
+        const searchData = e.target.value.toLowerCase();
+        const filterData = category.filter((item)=>{
+            return(
+                item.city.toLocaleLowerCase().includes(searchData)
+            )
+        })
+        displayItem(filterData)
+    })
+        const displayItem = (items)=>{
+            document.getElementById('root').innerHTML=items.map((item)=>{
+                var {id,city,time,avilable} = item;
+                return(
+                    `<div class = 'row'>
+                        <div class = 'col-md-12 col-sm-1'>
+                            <div class='box'>
+                        <div class='bottom'>
+                            <img ' + ${avilable} + '>
+                            <h3>${city}</h3>
+                            <p>${time}</p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>`
+                )
+            }).join('')
+        };
+    displayItem(category);
+</script>
